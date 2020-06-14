@@ -18,6 +18,17 @@
 
     #page-home main{
         align-items: center;
+    }    
+}
+
+@media (min-width: 1000px){
+    #page-home{
+        background-position-x: 40vw;
     }
-    
+}
+
+@media (max-height: 700px){
+    #paige-home{
+        background-position-y: 200px;
+    }
 }
