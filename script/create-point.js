@@ -1,8 +1,8 @@
 
 function populateUFs(){
-    const ufSelect = document.querySelector("select[name=estado]")
+    const ufSelect = document.querySelector("select[name=uf]")
 
-    fetch("https://servicodados.ibge.gov.br/api/v1/localidades/distritos")
+    fetch("https://servicodados.ibge.gov.br/api/v1/localidades/estados")
     //.then( (resposta) => {return resposta.json()} )
     .then(resposta => resposta.json())
 
@@ -12,7 +12,6 @@ function populateUFs(){
             ufSelect.innerHTML += `<option value="${state.id}">${state.nome}</option>`
         }
     })
-    
 }
 
 populateUFs()
@@ -23,5 +22,5 @@ function getCidade(event){
 }
 
 document
-.querySelector("select[name=uf]")
-.addEventListener("chage", getCidade)
+    .querySelector("select[name=uf]")
+    .addEventListener("change", getCidade)
